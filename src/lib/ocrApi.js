@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const api = axios.create({
-  baseURL: '/api/ocr',
+  baseURL: `${import.meta.env.VITE_API_BASE}api/ocr`,
   timeout: 180000,
 })
 

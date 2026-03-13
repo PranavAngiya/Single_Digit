@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const api = axios.create({
-  baseURL: '/api/pipeline',
+  baseURL: `${import.meta.env.VITE_API_BASE}api/pipeline`,
   timeout: 120000,
 })
 
@@ -117,7 +117,7 @@ export async function resetPipeline() {
 }
 
 export function getDownloadUrl(filename) {
-  return `/api/pipeline/download/${filename}`
+  return `${import.meta.env.VITE_API_BASE}api/pipeline/download/${filename}`
 }
 
 export async function downloadFile(filename, label) {
